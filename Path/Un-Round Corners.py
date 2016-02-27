@@ -24,15 +24,15 @@ def line(p1, p2):
 	return A, B, -C
 
 def intersection(L1, L2):
-    D  = L1[0] * L2[1] - L1[1] * L2[0]
-    Dx = L1[2] * L2[1] - L1[1] * L2[2]
-    Dy = L1[0] * L2[2] - L1[2] * L2[0]
-    if D != 0:
-        x = float(Dx) / float(D)
-        y = float(Dy) / float(D)
-        return x,y
-    else:
-        return False
+	D  = L1[0] * L2[1] - L1[1] * L2[0]
+	Dx = L1[2] * L2[1] - L1[1] * L2[2]
+	Dy = L1[0] * L2[2] - L1[2] * L2[0]
+	if D != 0:
+		x = float(Dx) / float(D)
+		y = float(Dy) / float(D)
+		return x,y
+	else:
+		return False
 
 def nudge(oncurveMv, offcurve1, offcurve2, oncurveSt, offsetX, offsetY):
 	distanceX = oncurveMv.x - oncurveSt.x
